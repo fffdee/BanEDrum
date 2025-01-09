@@ -3,7 +3,7 @@
 #include "usbd_cdc_if.h"
 #include <stdint.h>
 #include <string.h>
-
+#include "spi.h"
 
 void flash_init(void (*Write)(uint8_t*,uint16_t),void (*Read)(uint8_t*,uint16_t));
 void flash_ReadID(uint8_t* manufacturerID, uint8_t* memoryType, uint8_t* deviceID,uint8_t dev);
@@ -17,11 +17,14 @@ void flash_ReadData(uint32_t address, uint8_t* data, uint16_t size,uint8_t dev);
 uint32_t flash_GetRemainingCapacity(uint8_t dev);
 uint32_t flash_GetTotalByte(uint8_t dev);
 void flash_EraseAll(uint8_t dev);
+void Erase_Write_data_Sector(uint32_t Address,uint32_t Write_data_NUM,uint8_t dev);  
+void Write_Page(uint32_t WriteAddr,uint8_t* pBuffer,uint16_t NumByteToWrite,uint8_t dev);
 BG_Flash_Manager BG_flash_manager = {
 
 	.Init = flash_init,
-	.PageProgram = flash_PageProgram,
+	.PageProgram = Write_Page,
 	.SectorErase = flash_SectorErase,
+	.DataErase = Erase_Write_data_Sector,
 	.WriteEnable = flash_WriteEnable,
 	.ReadData = flash_ReadData,
 	.ReadID = flash_ReadID,
@@ -41,29 +44,33 @@ void flash_init(void (*Write)(uint8_t*,uint16_t),void (*Read)(uint8_t*,uint16_t)
 void flash_write_byte(uint8_t data){
 
 	BG_flash_manager.Write(&data, 1);
-	delay_us(250);
+//	HAL_SPI_Transmit_DMA(&hspi1, &data,1);
+	delay_us(150);
 
 }
 
 void flash_write(uint8_t *data,uint16_t size){
 
 	BG_flash_manager.Write(data, size);
-	delay_us(250);
+	//HAL_SPI_Transmit_DMA(&hspi1, data,size);
+	delay_us(150);
 
 }
 uint8_t flash_read_byte(){
 
 	uint8_t data;
 	BG_flash_manager.Read(&data, 1);
-	delay_us(250);
+	//HAL_SPI_Receive_DMA(&hspi1, &data,1);
+	delay_us(150);
 
 	return data;
 }
 void flash_read(uint8_t* data,uint16_t size){
 
 
-		BG_flash_manager.Read(data, size);;
-		delay_us(250);
+		BG_flash_manager.Read(data, size);
+		//HAL_SPI_Receive_DMA(&hspi1, data,size);
+		delay_us(150);
 }
 
 
@@ -179,7 +186,7 @@ uint32_t flash_GetRemainingCapacity(uint8_t dev) {
         sectorAddress += SECTOR_SIZE;
     }
     usb_printf("Total is:%d KByte,Remain is:%d KByte\n",(Windbond_GetCapacity(deviceID,dev)/SECTOR_SIZE)*4,remainingCapacity*4);
-    return remainingCapacity;
+    return remainingCapacity*64;
 }
 
 void flash_WriteEnable(uint8_t enable,uint8_t dev) {
@@ -248,6 +255,9 @@ void flash_WaitForWriteEnd(uint8_t dev) {
     while ((flash_ReadStatusReg(dev) & 0x01) == 0x01);
 }
 
+
+
+
 // 扇区擦除
 void flash_SectorErase(uint32_t sectorAddress,uint8_t dev) {
 
@@ -272,7 +282,26 @@ void flash_SectorErase(uint32_t sectorAddress,uint8_t dev) {
 		flash_WaitForWriteEnd(dev);
 	}
 }
-
+//擦除地址所在的扇区
+void Erase_Write_data_Sector(uint32_t Address,uint32_t Write_data_NUM,uint8_t dev)   
+{
+	//总共4096个扇区
+	//计算 写入数据开始的地址 + 要写入数据个数的最后地址 所处的扇区	
+	if(dev==DEV_NOR){
+		uint16_t Star_Sector,End_Sector,Num_Sector;
+		Star_Sector = Address / 4096;						//数据写入开始的扇区
+		End_Sector = (Address + Write_data_NUM) / 4096;		//数据写入结束的扇区
+		Num_Sector = End_Sector - Star_Sector;  			//数据写入跨几个扇区
+	 
+		//开始擦除扇区
+		for(uint16_t i=0;i <= Num_Sector;i++)
+		{
+			flash_SectorErase(Address,dev);
+			Address += 4095;
+		}
+	}
+ 
+}
 
 void flash_EraseAll(uint8_t dev) {
 	if(dev==DEV_NOR){
@@ -360,6 +389,34 @@ uint8_t flash_PageProgram(uint32_t address, uint8_t* data, uint16_t size,uint8_t
     return FLASH_STATUS_OK;  // 返回成功状态
 }
 
+void Write_Page(uint32_t WriteAddr,uint8_t* pBuffer,uint16_t NumByteToWrite,uint8_t dev)   
+{
+	if(dev==DEV_NOR){
+	uint16_t Word_remain;
+	Word_remain=256-WriteAddr%256; 	//定位页剩余的字数	
+	
+	if(NumByteToWrite <= Word_remain)
+		Word_remain=NumByteToWrite;		//定位页能一次写完
+	while(1)
+	{
+		flash_PageProgram(WriteAddr,pBuffer,Word_remain,dev);	
+		if(NumByteToWrite==Word_remain)
+		{
+			break;	//判断写完就 break
+		}	
+	 	else //没写完，翻页了
+		{
+			pBuffer += Word_remain;		//直针后移当页已写字数
+			WriteAddr += Word_remain;	
+			NumByteToWrite -= Word_remain;	//减去已经写入了的字数
+			if(NumByteToWrite>256)
+				Word_remain=256; 		//一次可以写入256个字
+			else 
+				Word_remain=NumByteToWrite; 	//不够256个字了
+		}
+	}	    
+}
+} 
 // 读取数据
 void flash_ReadData(uint32_t address, uint8_t* data, uint16_t size ,uint8_t dev) {
 

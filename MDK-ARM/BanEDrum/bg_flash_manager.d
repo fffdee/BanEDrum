@@ -56,3 +56,4 @@ banedrum\bg_flash_manager.o: E:\keil5\ARM\ARMCC\Bin\..\include\string.h
 banedrum\bg_flash_manager.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h
 banedrum\bg_flash_manager.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
 banedrum\bg_flash_manager.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h
+banedrum\bg_flash_manager.o: ../Core/Inc/spi.h

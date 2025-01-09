@@ -1,6 +1,6 @@
 Dependencies for Project 'BanEDrum', Target 'BanEDrum': (DO NOT MODIFY !)
 F (startup_stm32f401xc.s)(0x677D3DEF)(--cpu Cortex-M4.fp -g --apcs=interwork -I.\RTE\_BanEDrum-IE:\keil5\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IE:\keil5\pack\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include--pd "__UVISION_VERSION SETA 527" --pd "_RTE_ SETA 1" --pd "STM32F401xC SETA 1"--list startup_stm32f401xc.lst --xref -o banedrum\startup_stm32f401xc.o --depend banedrum\startup_stm32f401xc.d)
-F (../Core/Src/main.c)(0x677D3D0C)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../hardware/BG_Lcd -I ../hardware/sd_card -I ..\hardware\BG_flash_manager-I.\RTE\_BanEDrum-IE:\keil5\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IE:\keil5\pack\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F401xC -DUSE_HAL_DRIVER -DSTM32F401xC-o banedrum\main.o --omf_browse banedrum\main.crf --depend banedrum\main.d)
+F (../Core/Src/main.c)(0x677EAD32)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../hardware/BG_Lcd -I ../hardware/sd_card -I ..\hardware\BG_flash_manager-I.\RTE\_BanEDrum-IE:\keil5\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IE:\keil5\pack\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F401xC -DUSE_HAL_DRIVER -DSTM32F401xC-o banedrum\main.o --omf_browse banedrum\main.crf --depend banedrum\main.d)
 I (../Core/Inc/main.h)(0x677A23BA)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6659C399)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x677A145C)
@@ -66,7 +66,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x6659C34C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x6659C34C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x6659C34C)
 I (../hardware/sd_card/delay.h)(0x677C0909)
-I (..\hardware\BG_flash_manager\bg_flash_manager.h)(0x677D379A)
+I (..\hardware\BG_flash_manager\bg_flash_manager.h)(0x677EAD1F)
 F (../Core/Src/gpio.c)(0x677A66C4)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../hardware/BG_Lcd -I ../hardware/sd_card -I ..\hardware\BG_flash_manager-I.\RTE\_BanEDrum-IE:\keil5\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IE:\keil5\pack\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F401xC -DUSE_HAL_DRIVER -DSTM32F401xC-o banedrum\gpio.o --omf_browse banedrum\gpio.crf --depend banedrum\gpio.d)
 I (../Core/Inc/gpio.h)(0x677A39C5)
 I (../Core/Inc/main.h)(0x677A23BA)
@@ -375,7 +375,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6659C3CD)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h)(0x6659C3D2)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6659C3D2)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6659C3D2)
-F (../Core/Src/usart.c)(0x677A39CC)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../hardware/BG_Lcd -I ../hardware/sd_card -I ..\hardware\BG_flash_manager-I.\RTE\_BanEDrum-IE:\keil5\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IE:\keil5\pack\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F401xC -DUSE_HAL_DRIVER -DSTM32F401xC-o banedrum\usart.o --omf_browse banedrum\usart.crf --depend banedrum\usart.d)
+F (../Core/Src/usart.c)(0x677E9EC6)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../hardware/BG_Lcd -I ../hardware/sd_card -I ..\hardware\BG_flash_manager-I.\RTE\_BanEDrum-IE:\keil5\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IE:\keil5\pack\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F401xC -DUSE_HAL_DRIVER -DSTM32F401xC-o banedrum\usart.o --omf_browse banedrum\usart.crf --depend banedrum\usart.d)
 I (../Core/Inc/usart.h)(0x677A39CC)
 I (../Core/Inc/main.h)(0x677A23BA)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6659C399)
@@ -419,6 +419,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6659C3CD)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h)(0x6659C3D2)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6659C3D2)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6659C3D2)
+I (E:\keil5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
 F (../Core/Src/stm32f4xx_it.c)(0x677AA6A4)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../hardware/BG_Lcd -I ../hardware/sd_card -I ..\hardware\BG_flash_manager-I.\RTE\_BanEDrum-IE:\keil5\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IE:\keil5\pack\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F401xC -DUSE_HAL_DRIVER -DSTM32F401xC-o banedrum\stm32f4xx_it.o --omf_browse banedrum\stm32f4xx_it.crf --depend banedrum\stm32f4xx_it.d)
 I (../Core/Inc/main.h)(0x677A23BA)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6659C399)
@@ -2296,8 +2297,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6659C3CD)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h)(0x6659C3D2)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6659C3D2)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6659C3D2)
-F (..\hardware\BG_flash_manager\bg_flash_manager.c)(0x677D3CBE)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../hardware/BG_Lcd -I ../hardware/sd_card -I ..\hardware\BG_flash_manager-I.\RTE\_BanEDrum-IE:\keil5\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IE:\keil5\pack\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F401xC -DUSE_HAL_DRIVER -DSTM32F401xC-o banedrum\bg_flash_manager.o --omf_browse banedrum\bg_flash_manager.crf --depend banedrum\bg_flash_manager.d)
-I (..\hardware\BG_flash_manager\bg_flash_manager.h)(0x677D379A)
+F (..\hardware\BG_flash_manager\bg_flash_manager.c)(0x677EACFC)(--c99 -c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../hardware/BG_Lcd -I ../hardware/sd_card -I ..\hardware\BG_flash_manager-I.\RTE\_BanEDrum-IE:\keil5\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IE:\keil5\pack\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F401xC -DUSE_HAL_DRIVER -DSTM32F401xC-o banedrum\bg_flash_manager.o --omf_browse banedrum\bg_flash_manager.crf --depend banedrum\bg_flash_manager.d)
+I (..\hardware\BG_flash_manager\bg_flash_manager.h)(0x677EAD1F)
 I (E:\keil5\ARM\ARMCC\include\stdint.h)(0x5E53505C)
 I (E:\keil5\ARM\ARMCC\include\stdbool.h)(0x5E53505C)
 I (../Core/Inc/main.h)(0x677A23BA)
@@ -2352,3 +2353,4 @@ I (E:\keil5\ARM\ARMCC\include\stdlib.h)(0x5E53505C)
 I (E:\keil5\ARM\ARMCC\include\string.h)(0x5E53505C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x6659C34C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x6659C34C)
+I (../Core/Inc/spi.h)(0x677A39CB)

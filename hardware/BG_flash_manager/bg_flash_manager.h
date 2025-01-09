@@ -23,7 +23,7 @@
 #define SECTOR_SIZE (4 * 1024*8) // 每个扇区的大小是32KBit
 
 #define DEVICE_ID_64MBIT  0x17
-#define DEVICE_ID_128MBIT 160
+#define DEVICE_ID_128MBIT 0x18
 #define DEVICE_ID_256MBIT 0x14
 #define DEVICE_ID_512MBIT 0x13
 #define DEVICE_ID_1GBIT   0x12
@@ -52,8 +52,9 @@ typedef struct BG_Flash_Manager{
 	void (*Init)(void (*Write)(uint8_t*,uint16_t),void (*Read)(uint8_t*,uint16_t));
 	void (*Write)(uint8_t*,uint16_t);
 	void (*Read)(uint8_t*,uint16_t);
-	uint8_t (*PageProgram)(uint32_t,uint8_t*,uint16_t,uint8_t);
+	void (*PageProgram)(uint32_t,uint8_t*,uint16_t,uint8_t);
 	void (*WriteEnable)(uint8_t,uint8_t);
+	void (*DataErase)(uint32_t,uint32_t,uint8_t);
 	void (*SectorErase)(uint32_t,uint8_t);
 	void (*ReadData)(uint32_t,uint8_t*,uint16_t,uint8_t);
 	void (*ReadID)(uint8_t*, uint8_t* , uint8_t*,uint8_t);
