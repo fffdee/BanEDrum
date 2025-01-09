@@ -1,0 +1,1 @@
+gcc CMakeFiles/BG_FMU.dir/download/bg_download.c.o CMakeFiles/BG_FMU.dir/read/bg_read.c.o CMakeFiles/BG_FMU.dir/src/main.c.o -o BG_FMU  -lev -lm 

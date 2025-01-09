@@ -1,0 +1,3 @@
+/home/bango/flash_manage_unit/src/build/CMakeFiles/BG_FMU.dir
+/home/bango/flash_manage_unit/src/build/CMakeFiles/edit_cache.dir
+/home/bango/flash_manage_unit/src/build/CMakeFiles/rebuild_cache.dir

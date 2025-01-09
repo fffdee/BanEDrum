@@ -30,19 +30,12 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "logic_run.h"
 
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-#include "bg_lcd.h"
-#include "sd_card.h"
-
-#include "usbd_cdc_if.h"
-#include "delay.h"
-#include "bg_flash_manager.h"
-extern uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len);
-
 
 /* USER CODE END PTD */
 
@@ -69,20 +62,10 @@ void adc_handle()
 				
      
 		}
-		CDC_Transmit_FS((uint8_t*)ADC_Value, 16);
+
 }
 
 
-void flash_write_func(uint8_t *data, uint16_t size){
-
-		HAL_SPI_Transmit_DMA(&hspi1, data,size);
-}
-
-
-void flash_read_func(uint8_t *data, uint16_t size){
-
-		HAL_SPI_Receive_DMA(&hspi1, data,size);
-}
 
 
 /* USER CODE END PM */
@@ -148,75 +131,11 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-	BG_lcd.Init();
-	BG_lcd.Clear(BLUE);
-//	delay_ms(2000);
-//	read_W25Q128_ID();
-//	delay_ms(500);
-//	W25Q128_test();
-	BG_flash_manager.Init(flash_write_func,flash_read_func);
-//	BG_flash_manager.EraseAll(DEV_NOR);
-	//usb_printf("erase ok!\n");
-	//delay_ms(2000);
-	uint32_t total = BG_flash_manager.GetTotalByte(DEV_NOR);
 	
-//	get_sd_info();
-////	sd_write_test();
-//	sd_read_test();
-
-    uint8_t writeData[7] = {1,2,3,4,5,6,7};
-    uint8_t readData[50]= {0};
-    uint32_t writeAddress = 4090; // 请确保写入地址在W25Q64的有效范围内
-		usb_printf("total is : %d!\n",total);
-
-		uint8_t manufacturerID, memoryType, deviceID;
-    BG_flash_manager.ReadID(&manufacturerID, &memoryType, &deviceID,DEV_NOR);
-		delay_ms(10);
-		usb_printf("ID is %d  %d  %d \n",manufacturerID ,memoryType ,deviceID);
-    // 写入数据
-    BG_flash_manager.PageProgram(writeAddress, writeData, sizeof(writeData),DEV_NOR);
-		
-		 BG_flash_manager.GetRemainingCapacity(DEV_NOR);
-	
-
-		
-	
-
-		HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,GPIO_PIN_RESET);
-
-			//读数据，看原始存在的数据
-		BG_flash_manager.ReadData(writeAddress, readData, 50,DEV_NOR);
-		for(uint8_t i=0;i<sizeof(writeData);i++){
-				usb_printf("%d\n",readData[i]);
-			delay_us(50);
-		}
-		//BG_flash_manager.EraseAll(DEV_NOR);
-		//usb_printf("erase ok!\n");			
-			
-		//擦除需要写数据所在的扇区
-		BG_flash_manager.DataErase(writeAddress,50,DEV_NOR);
-		BG_flash_manager.ReadData(writeAddress, readData, 50,DEV_NOR);
-		for(uint8_t i=0;i<sizeof(writeData);i++){
-				usb_printf("%d\n",readData[i]);
-			delay_us(50);
-		}
-
-		BG_flash_manager.PageProgram(writeAddress,writeData,sizeof(writeData),DEV_NOR);
-		BG_flash_manager.ReadData(writeAddress, readData, 50,DEV_NOR);
-		for(uint8_t i=0;i<sizeof(writeData);i++){
-				usb_printf("%d\n",readData[i]);
-			delay_us(50);
-		}		
 		
   while (1)
   {
-		HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,GPIO_PIN_RESET);
-
-		delay_ms(1000);
-
-		HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,GPIO_PIN_SET);
-
-		delay_ms(1000);
+		
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
