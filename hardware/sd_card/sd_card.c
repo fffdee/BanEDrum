@@ -70,8 +70,8 @@ void get_sd_info(void){
 void sd_write_test(){
 	uint32_t i;
 	/* 填充缓冲区数据 */
-	memset(Buffer_Tx, 0x15, sizeof(Buffer_Tx));
- Buffer_Tx[0] = 0xff;
+		memset(Buffer_Tx, 0x15, sizeof(Buffer_Tx));
+		Buffer_Tx[0] = 0xff;
 /* 向SD卡块写入数据 */
 			usb_printf("------------------- Write SD card block data Test ------------------\r\n");
 			if(HAL_SD_WriteBlocks_DMA(&hsd, Buffer_Tx, BLOCK_START_ADDR, NUM_OF_BLOCKS) == HAL_OK)
