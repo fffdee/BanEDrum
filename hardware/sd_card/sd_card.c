@@ -9,7 +9,7 @@
 
 
 uint8_t Buffer_Tx[512],Buffer_Rx[512] = {0};
-uint32_t i;
+
 
 
 void get_sd_info(void){
@@ -68,7 +68,7 @@ void get_sd_info(void){
 }
 
 void sd_write_test(){
-	
+	uint32_t i;
 	/* 填充缓冲区数据 */
 	memset(Buffer_Tx, 0x15, sizeof(Buffer_Tx));
  Buffer_Tx[0] = 0xff;
@@ -95,6 +95,7 @@ void sd_write_test(){
 
 void sd_read_test()
 {
+		uint32_t i;
 		/* 读取操作之后的数据 */
 	usb_printf("------------------- Read SD card block data after Write ------------------\r\n");
 	 

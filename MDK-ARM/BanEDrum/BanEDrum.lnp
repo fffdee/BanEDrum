@@ -1,4 +1,4 @@
---cpu=Cortex-M4.fp
+--cpu=Cortex-M4.fp.sp
 "banedrum\startup_stm32f401xc.o"
 "banedrum\main.o"
 "banedrum\gpio.o"
@@ -55,7 +55,12 @@
 "banedrum\bg_flash_manager.o"
 "banedrum\bg_download.o"
 "banedrum\logic_run.o"
---strict --scatter "BanEDrum\BanEDrum.sct"
+"banedrum\hardware_interfance.o"
+"banedrum\midi_controller.o"
+"banedrum\standard_request _processing.o"
+"banedrum\bg_read.o"
+"banedrum\play.o"
+--library_type=microlib --strict --scatter "BanEDrum\BanEDrum.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "BanEDrum.map" -o BanEDrum\BanEDrum.axf

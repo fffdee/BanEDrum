@@ -69,32 +69,32 @@ void adc_handle()
 
 uint16_t tim2=0,tim3=0;
 
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+//void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
-{
+//{
 
-//    if (htim->Instance == htim2.Instance)
+////    if (htim->Instance == htim2.Instance)
+
+////    {
+////				tim2++;
+////				if(tim2==1000){
+////					usb_printf("TIM2 \n");
+////					tim2=0;
+////				}
+////    }
+////		
+//		
+//    if (htim->Instance == htim3.Instance)
 
 //    {
-//				tim2++;
-//				if(tim2==1000){
-//					usb_printf("TIM2 \n");
-//					tim2=0;
+//				
+//				if(tim3==2){
+//					usb_printf("TIM3 \n");
+//					tim3=0;
 //				}
 //    }
-//		
-		
-    if (htim->Instance == htim3.Instance)
 
-    {
-				
-				if(tim3==2){
-					usb_printf("TIM3 \n");
-					tim3=0;
-				}
-    }
-
-}
+//}
 
 
 
