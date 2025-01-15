@@ -106,8 +106,11 @@ void MIDI_Callback(void)
          }
         
     }
-    if(play_flag)
-    audioPlay.Callbaclk(play);
+    if(play_flag){
+			
+				audioPlay.Callbaclk((uint16_t*)play);
+			
+		}
 
     polyphony_count=0;
 }
@@ -120,7 +123,7 @@ void MIDI_Message_Handle(uint8_t *data, uint8_t len)
     {
         for(uint8_t i=0; i<FUNC_COUNT;i++){
 
-            if((state==MIDI_funcstion[i].Funcstion_ID))
+            if(state==MIDI_funcstion[i].Funcstion_ID)
                 MIDI_funcstion[i].MIDI_FUNC(data,sizeof(data));               
                 
         } 

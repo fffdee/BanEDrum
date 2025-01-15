@@ -27,16 +27,81 @@ Project File Date:  01/15/2025
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\app\Keil_v5\ARM\ARMCC\Bin'
 Build target 'BanEDrum'
-compiling logic_run.c...
-../hardware/BG_flash_manager/bg_download.h(31): warning:  #1-D: last line of file ends without a newline
-  				 
-..\logic_run\logic_run.c(49): warning:  #1035-D: single-precision operand implicitly converted to double-precision
-          sine_wave[i] = (int16_t)(sin((float)i * 2 * M_PI / BUFFER_SIZE2) * 32767);
-..\logic_run\logic_run.c: 2 warnings, 0 errors
+compiling midi_controller.c...
+..\BanGTsynth\BG_Midi_Controller\midi_controller.c(38): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      float pitchShiftFactor = pow(2.0, (float)tone / 12.0); // Âçá‰∏Ä‰∏™ÂÖ®Èü≥ÁöÑÂõ†Â≠ê  
+..\BanGTsynth\BG_Midi_Controller\midi_controller.c: 1 warning, 0 errors
 linking...
 Program Size: Code=37064 RO-data=760 RW-data=852 ZI-data=18196  
 FromELF: creating hex file...
-"BanEDrum\BanEDrum.axf" - 0 Error(s), 2 Warning(s).
+After Build - User command #2: C:\Users\BanGO\Desktop\BanEDrum\MDK-ARM\keil-build-viewer.exe
+=================================================== keil-build-viewer v1.5b ==================================================
+ 
+[BanEDrum.uvprojx]  [BanEDrum]  [STM32F401RCTx]
+ 
+-------------------------------------------------------------------------------------------------------------------------------
+                                 FILE(s)                                |         RAM (byte)       |       FLASH (byte)       |
+-------------------------------------------------------------------------------------------------------------------------------
+../Core/Src/adc.c():                                                    |          72              |         252              |
+..\hardware\BG_flash_manager\bg_flash_manager.c():                      |          48              |        1434              |
+..\hardware\BG_Lcd\bg_lcd.c():                                          |          40              |        1444              |
+..\BanGTsynth\bg_read\bg_read.c():                                      |           0              |         468              |
+..\hardware\sd_card\delay.c():                                          |           0              |          70              |
+../Core/Src/dma.c():                                                    |           0              |         156              |
+../Core/Src/gpio.c():                                                   |           0              |         236              |
+..\BanGTsynth\hardware_interfance.c():                                  |          60              |          60              |
+../Core/Src/i2s.c():                                                    |         168              |         244              |
+..\logic_run\logic_run.c():                                             |        1024              |         286              |
+../Core/Src/main.c():                                                   |           0              |         216              |
+..\BanGTsynth\BG_Midi_Controller\midi_controller.c():                   |        2144              |         556              |
+..\BanGTsynth\play\play.c():                                            |           0              |          36              |
+../Core/Src/sdio.c():                                                   |         324              |         388              |
+../Core/Src/spi.c():                                                    |         280              |         284              |
+..\hardware\BG_Lcd\st7735.c():                                          |           0              |         388              |
+startup_stm32f401xc.s():                                                |        8192              |         440              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c():                  |          12              |         192              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c():              |           0              |         712              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c():           |           0              |         198              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c():              |           0              |         946              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c():             |           0              |         490              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c():              |           0              |         906              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c():           |           0              |         694              |
+../Core/Src/stm32f4xx_hal_msp.c():                                      |           0              |          48              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c():              |           0              |        2576              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c():           |           0              |          78              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c():              |           0              |        1356              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c():           |           0              |         432              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd.c():               |           0              |        2216              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c():              |           0              |        1650              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c():              |           0              |        1000              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c():           |           0              |         128              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c():             |           0              |         368              |
+../Core/Src/stm32f4xx_it.c():                                           |           0              |         152              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c():             |           0              |        1468              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c():               |           0              |        2700              |
+../Core/Src/system_stm32f4xx.c():                                       |           4              |          44              |
+../Core/Src/tim.c():                                                    |         144              |         200              |
+../Core/Src/usart.c():                                                  |         264              |         280              |
+../USB_DEVICE/App/usb_device.c():                                       |         732              |          84              |
+../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c():  |         139              |        1417              |
+../USB_DEVICE/App/usbd_cdc_if.c():                                      |        2582              |         206              |
+../USB_DEVICE/Target/usbd_conf.c():                                     |        1796              |         636              |
+../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c():      |           0              |         924              |
+../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c():    |           1              |        1355              |
+../USB_DEVICE/App/usbd_desc.c():                                        |         590              |         354              |
+../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c():     |           0              |         132              |
+-------------------------------------------------------------------------------------------------------------------------------
+LR_IROM1
+        RAM 1             [0x20000000 | 0x00010000 (65536)]
+                RW_IRAM1  [0x20000000]|°ˆ°ı°ı°ı°ı°ı°ı°ı°ı°ı°ı°ı°ı°ı____________________________________| (  18.6 KB /  64.0 KB )  29.1%  
+ 
+        FLASH 1           [0x08000000 | 0x00040000 (262144)]
+                ER_IROM1  [0x08000000]|°ˆ°ˆ°ˆ°ˆ°ˆ°ˆ°ˆ___________________________________________| (  36.9 KB / 256.0 KB )  14.4%  
+ 
+Maximum Stack Usage =       3456 bytes + Unknown(Cycles, Untraceable Function Pointers)
+ 
+=============================================================================================================================
+"BanEDrum\BanEDrum.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 

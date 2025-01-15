@@ -2,21 +2,27 @@
        252          0          0          0         72          0   adc.o
       1386          0          0         48          0          0   bg_flash_manager.o
       1404          0          0         40          0          0   bg_lcd.o
+       468          0          0          0          0          0   bg_read.o
         70          0          0          0          0          0   delay.o
        156          0          0          0          0          0   dma.o
        236          0          0          0          0          0   gpio.o
+         0          0          0         60          0          0   hardware_interfance.o
        244          0          0          0        168          0   i2s.o
-       604          0          0          0          0          0   main.o
+       286          0          0          0       1024          0   logic_run.o
+       216          0          0          0          0          0   main.o
+       540          0          0         16       2128          0   midi_controller.o
+        36          0          0          0          0          0   play.o
        388          0          0          0        324          0   sdio.o
        284          0          0          0        280          0   spi.o
        388          0          0          0          0          0   st7735.o
-        64          0        404          0      12288          0   startup_stm32f401xc.o
+       612          0          0        424          0          0   standard_request
+        36          0        404          0       8192          0   startup_stm32f401xc.o
        180          0          0         12          0          0   stm32f4xx_hal.o
        712          0          0          0          0          0   stm32f4xx_hal_adc.o
        198          0          0          0          0          0   stm32f4xx_hal_cortex.o
        938          0          8          0          0          0   stm32f4xx_hal_dma.o
        490          0          0          0          0          0   stm32f4xx_hal_gpio.o
-       620          0          0          0          0          0   stm32f4xx_hal_i2s.o
+       906          0          0          0          0          0   stm32f4xx_hal_i2s.o
        694          0          0          0          0          0   stm32f4xx_hal_i2s_ex.o
         48          0          0          0          0          0   stm32f4xx_hal_msp.o
       2576          0          0          0          0          0   stm32f4xx_hal_pcd.o
@@ -25,18 +31,18 @@
        432          0          0          0          0          0   stm32f4xx_hal_rcc_ex.o
       2216          0          0          0          0          0   stm32f4xx_hal_sd.o
       1650          0          0          0          0          0   stm32f4xx_hal_spi.o
-       580          0          0          0          0          0   stm32f4xx_hal_tim.o
-       124          0          0          0          0          0   stm32f4xx_hal_tim_ex.o
+      1000          0          0          0          0          0   stm32f4xx_hal_tim.o
+       128          0          0          0          0          0   stm32f4xx_hal_tim_ex.o
        368          0          0          0          0          0   stm32f4xx_hal_uart.o
-       128          0          0          0          0          0   stm32f4xx_it.o
+       152          0          0          0          0          0   stm32f4xx_it.o
       1468          0          0          0          0          0   stm32f4xx_ll_sdmmc.o
       2700          0          0          0          0          0   stm32f4xx_ll_usb.o
         16          0         24          4          0          0   system_stm32f4xx.o
-       256          0          0          0        144          0   tim.o
+       200          0          0          0        144          0   tim.o
        280          0          0          0        264          0   usart.o
         84          0          0          0        732          0   usb_device.o
       1278          0          0        139          0          0   usbd_cdc.o
-       152          0          0         20       2048          0   usbd_cdc_if.o
+       184          0          0         22       2560          0   usbd_cdc_if.o
        636          0          0          0       1796          0   usbd_conf.o
        924          0          0          0          0          0   usbd_core.o
       1354          0          0          1          0          0   usbd_ctlreq.o
@@ -48,8 +54,8 @@ Memory Map of the image
 
 	Load Region LR_IROM1 
 
-		Execution Region ER_IROM1 (Exec base: 0x08000000, Size: 0x00008F98, Max: 0x00040000, END)
+		Execution Region ER_IROM1 (Exec base: 0x08000000, Size: 0x000093C0, Max: 0x00040000, END)
 
-		Execution Region RW_IRAM1 (Exec base: 0x20000000, Size: 0x00004A80, Max: 0x00010000, END)
+		Execution Region RW_IRAM1 (Exec base: 0x20000000, Size: 0x00004A68, Max: 0x00010000, END)
 
 Image component sizes
