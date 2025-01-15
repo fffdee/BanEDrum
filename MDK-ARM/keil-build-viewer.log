@@ -1,0 +1,207 @@
+
+=================================================== keil-build-viewer v1.5b ==================================================
+ 
+[Search keil project] 1 item(s)
+	C:\Users\BanGO\Desktop\BanEDrum\MDK-ARM\BanEDrum.uvprojx
+
+[User input] 
+[Current folder] C:\Users\BanGO\Desktop\BanEDrum\MDK-ARM
+[Encoding] 936
+[Keil project path] C:\Users\BanGO\Desktop\BanEDrum\MDK-ARM\BanEDrum.uvprojx
+[Keil project name] BanEDrum.uvprojx
+[Is keil v4] 0
+[target name] BanEDrum
+[final target name] BanEDrum
+
+[Device] STM32F401RCTx
+[Target name] 
+[Output name] BanEDrum
+[Output path] BanEDrum\
+[Listing path] .\
+[Is has pack] 1
+[Is enbale LTO] 0
+[Is has user library] 0
+[Is custom scatter file] 0
+
+[BanEDrum.uvprojx]  [BanEDrum]  [STM32F401RCTx]
+ 
+[memory info]
+[name] IRAM [base addr] 0x20000000 [size] 0x00010000 [type] 1 [off-chip] 0 [is pack] 1 [ID] 2 
+[name] IROM [base addr] 0x08000000 [size] 0x00040000 [type] 2 [off-chip] 0 [is pack] 1 [ID] 3 
+
+
+[map file path] C:\Users\BanGO\Desktop\BanEDrum\MDK-ARM\BanEDrum.map
+
+[region info]
+[load region] LR_IROM1
+	[execution region] ER_IROM1, 0x08000000, 0x00040000, 0x00008F98 [memory type] 2 [memory ID] 3
+
+	[execution region] RW_IRAM1, 0x20000000, 0x00010000, 0x00004A80 [memory type] 1 [memory ID] 2
+		[ZI block] addr: 0x2000015C, size: 0x00004924 (18724)
+
+
+[object name max length] 29
+[object path max length] 67
+
+[object in map file]
+[object name] adc.o                          [path] ../Core/Src/adc.c
+[object name] bg_flash_manager.o             [path] ..\hardware\BG_flash_manager\bg_flash_manager.c
+[object name] bg_lcd.o                       [path] ..\hardware\BG_Lcd\bg_lcd.c
+[object name] delay.o                        [path] ..\hardware\sd_card\delay.c
+[object name] dma.o                          [path] ../Core/Src/dma.c
+[object name] gpio.o                         [path] ../Core/Src/gpio.c
+[object name] i2s.o                          [path] ../Core/Src/i2s.c
+[object name] main.o                         [path] ../Core/Src/main.c
+[object name] sdio.o                         [path] ../Core/Src/sdio.c
+[object name] spi.o                          [path] ../Core/Src/spi.c
+[object name] st7735.o                       [path] ..\hardware\BG_Lcd\st7735.c
+[object name] startup_stm32f401xc.o          [path] startup_stm32f401xc.s
+[object name] stm32f4xx_hal.o                [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
+[object name] stm32f4xx_hal_adc.o            [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c
+[object name] stm32f4xx_hal_cortex.o         [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
+[object name] stm32f4xx_hal_dma.o            [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
+[object name] stm32f4xx_hal_gpio.o           [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
+[object name] stm32f4xx_hal_i2s.o            [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c
+[object name] stm32f4xx_hal_i2s_ex.o         [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c
+[object name] stm32f4xx_hal_msp.o            [path] ../Core/Src/stm32f4xx_hal_msp.c
+[object name] stm32f4xx_hal_pcd.o            [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c
+[object name] stm32f4xx_hal_pcd_ex.o         [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c
+[object name] stm32f4xx_hal_rcc.o            [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
+[object name] stm32f4xx_hal_rcc_ex.o         [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
+[object name] stm32f4xx_hal_sd.o             [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd.c
+[object name] stm32f4xx_hal_spi.o            [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c
+[object name] stm32f4xx_hal_tim.o            [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
+[object name] stm32f4xx_hal_tim_ex.o         [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
+[object name] stm32f4xx_hal_uart.o           [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c
+[object name] stm32f4xx_it.o                 [path] ../Core/Src/stm32f4xx_it.c
+[object name] stm32f4xx_ll_sdmmc.o           [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c
+[object name] stm32f4xx_ll_usb.o             [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c
+[object name] system_stm32f4xx.o             [path] ../Core/Src/system_stm32f4xx.c
+[object name] tim.o                          [path] ../Core/Src/tim.c
+[object name] usart.o                        [path] ../Core/Src/usart.c
+[object name] usb_device.o                   [path] ../USB_DEVICE/App/usb_device.c
+[object name] usbd_cdc.o                     [path] ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c
+[object name] usbd_cdc_if.o                  [path] ../USB_DEVICE/App/usbd_cdc_if.c
+[object name] usbd_conf.o                    [path] ../USB_DEVICE/Target/usbd_conf.c
+[object name] usbd_core.o                    [path] ../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c
+[object name] usbd_ctlreq.o                  [path] ../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c
+[object name] usbd_desc.o                    [path] ../USB_DEVICE/App/usbd_desc.c
+[object name] usbd_ioreq.o                   [path] ../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c
+
+[file path in keil project]
+[old name] startup_stm32f401xc.s          [type] 1   [path] startup_stm32f401xc.s
+[old name] main.c                         [type] 1   [path] ../Core/Src/main.c
+[old name] gpio.c                         [type] 1   [path] ../Core/Src/gpio.c
+[old name] adc.c                          [type] 1   [path] ../Core/Src/adc.c
+[old name] dma.c                          [type] 1   [path] ../Core/Src/dma.c
+[old name] i2s.c                          [type] 1   [path] ../Core/Src/i2s.c
+[old name] sdio.c                         [type] 1   [path] ../Core/Src/sdio.c
+[old name] spi.c                          [type] 1   [path] ../Core/Src/spi.c
+[old name] tim.c                          [type] 1   [path] ../Core/Src/tim.c
+[old name] usart.c                        [type] 1   [path] ../Core/Src/usart.c
+[old name] stm32f4xx_it.c                 [type] 1   [path] ../Core/Src/stm32f4xx_it.c
+[old name] stm32f4xx_hal_msp.c            [type] 1   [path] ../Core/Src/stm32f4xx_hal_msp.c
+[old name] stm32f4xx_hal_pcd.c            [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c
+[old name] stm32f4xx_hal_pcd_ex.c         [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c
+[old name] stm32f4xx_ll_usb.c             [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c
+[old name] stm32f4xx_hal_rcc.c            [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
+[old name] stm32f4xx_hal_rcc_ex.c         [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
+[old name] stm32f4xx_hal_flash.c          [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c
+[old name] stm32f4xx_hal_flash_ex.c       [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c
+[old name] stm32f4xx_hal_flash_ramfunc.c  [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c
+[old name] stm32f4xx_hal_gpio.c           [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
+[old name] stm32f4xx_hal_dma_ex.c         [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
+[old name] stm32f4xx_hal_dma.c            [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
+[old name] stm32f4xx_hal_pwr.c            [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
+[old name] stm32f4xx_hal_pwr_ex.c         [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
+[old name] stm32f4xx_hal_cortex.c         [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
+[old name] stm32f4xx_hal.c                [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
+[old name] stm32f4xx_hal_exti.c           [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
+[old name] stm32f4xx_hal_adc.c            [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c
+[old name] stm32f4xx_hal_adc_ex.c         [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c
+[old name] stm32f4xx_ll_adc.c             [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c
+[old name] stm32f4xx_hal_i2s.c            [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c
+[old name] stm32f4xx_hal_i2s_ex.c         [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c
+[old name] stm32f4xx_ll_sdmmc.c           [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c
+[old name] stm32f4xx_hal_sd.c             [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd.c
+[old name] stm32f4xx_hal_mmc.c            [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_mmc.c
+[old name] stm32f4xx_hal_spi.c            [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c
+[old name] stm32f4xx_hal_tim.c            [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
+[old name] stm32f4xx_hal_tim_ex.c         [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
+[old name] stm32f4xx_hal_uart.c           [type] 1   [path] ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c
+[old name] system_stm32f4xx.c             [type] 1   [path] ../Core/Src/system_stm32f4xx.c
+[old name] usb_device.c                   [type] 1   [path] ../USB_DEVICE/App/usb_device.c
+[old name] usbd_desc.c                    [type] 1   [path] ../USB_DEVICE/App/usbd_desc.c
+[old name] usbd_cdc_if.c                  [type] 1   [path] ../USB_DEVICE/App/usbd_cdc_if.c
+[old name] usbd_conf.c                    [type] 1   [path] ../USB_DEVICE/Target/usbd_conf.c
+[old name] usbd_core.c                    [type] 1   [path] ../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c
+[old name] usbd_ctlreq.c                  [type] 1   [path] ../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c
+[old name] usbd_ioreq.c                   [type] 1   [path] ../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c
+[old name] usbd_cdc.c                     [type] 1   [path] ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c
+[old name] bg_lcd.c                       [type] 1   [path] ..\hardware\BG_Lcd\bg_lcd.c
+[old name] st7735.c                       [type] 1   [path] ..\hardware\BG_Lcd\st7735.c
+[old name] sd_card.c                      [type] 1   [path] ..\hardware\sd_card\sd_card.c
+[old name] delay.c                        [type] 1   [path] ..\hardware\sd_card\delay.c
+[old name] bg_flash_manager.c             [type] 1   [path] ..\hardware\BG_flash_manager\bg_flash_manager.c
+-------------------------------------------------------------------------------------------------------------------------------
+                                 FILE(s)                                |         RAM (byte)       |       FLASH (byte)       |
+-------------------------------------------------------------------------------------------------------------------------------
+../Core/Src/adc.c():                                                    |          72              |         252              |
+..\hardware\BG_flash_manager\bg_flash_manager.c():                      |          48              |        1434              |
+..\hardware\BG_Lcd\bg_lcd.c():                                          |          40              |        1444              |
+..\hardware\sd_card\delay.c():                                          |           0              |          70              |
+../Core/Src/dma.c():                                                    |           0              |         156              |
+../Core/Src/gpio.c():                                                   |           0              |         236              |
+../Core/Src/i2s.c():                                                    |         168              |         244              |
+../Core/Src/main.c():                                                   |           0              |         604              |
+../Core/Src/sdio.c():                                                   |         324              |         388              |
+../Core/Src/spi.c():                                                    |         280              |         284              |
+..\hardware\BG_Lcd\st7735.c():                                          |           0              |         388              |
+startup_stm32f401xc.s():                                                |       12288              |         468              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c():                  |          12              |         192              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c():              |           0              |         712              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c():           |           0              |         198              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c():              |           0              |         946              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c():             |           0              |         490              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c():              |           0              |         620              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c():           |           0              |         694              |
+../Core/Src/stm32f4xx_hal_msp.c():                                      |           0              |          48              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c():              |           0              |        2576              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c():           |           0              |          78              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c():              |           0              |        1356              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c():           |           0              |         432              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd.c():               |           0              |        2216              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c():              |           0              |        1650              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c():              |           0              |         580              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c():           |           0              |         124              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c():             |           0              |         368              |
+../Core/Src/stm32f4xx_it.c():                                           |           0              |         128              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c():             |           0              |        1468              |
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c():               |           0              |        2700              |
+../Core/Src/system_stm32f4xx.c():                                       |           4              |          44              |
+../Core/Src/tim.c():                                                    |         144              |         256              |
+../Core/Src/usart.c():                                                  |         264              |         280              |
+../USB_DEVICE/App/usb_device.c():                                       |         732              |          84              |
+../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c():  |         139              |        1417              |
+../USB_DEVICE/App/usbd_cdc_if.c():                                      |        2068              |         172              |
+../USB_DEVICE/Target/usbd_conf.c():                                     |        1796              |         636              |
+../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c():      |           0              |         924              |
+../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c():    |           1              |        1355              |
+../USB_DEVICE/App/usbd_desc.c():                                        |         590              |         354              |
+../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c():     |           0              |         132              |
+-------------------------------------------------------------------------------------------------------------------------------
+[memory print mode]: 0
+LR_IROM1
+        RAM 1             [0x20000000 | 0x00010000 (65536)]
+                [zi start] 1   [zi end] 14
+                RW_IRAM1  [0x20000000]|¡ö¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ____________________________________| (  18.6 KB /  64.0 KB )  29.1%  
+ 
+        FLASH 1           [0x08000000 | 0x00040000 (262144)]
+                ER_IROM1  [0x08000000]|¡ö¡ö¡ö¡ö¡ö¡ö¡ö___________________________________________| (  35.8 KB / 256.0 KB )  14.0%  
+ 
+[htm file path] C:\Users\BanGO\Desktop\BanEDrum\MDK-ARM\BanEDrum\BanEDrum.htm
+Maximum Stack Usage =        596 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)
+ 
+=============================================================================================================================
+
+run time: 0.160 s

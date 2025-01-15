@@ -21,3 +21,6 @@ BG_Download BG_Download_Init(void(*Write)(uint32_t,uint8_t*,uint16_t,uint8_t),vo
 
     return BG_download;
 }
+
+
+

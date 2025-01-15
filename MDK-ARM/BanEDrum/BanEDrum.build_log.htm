@@ -3,38 +3,40 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: ¦ÌVision V5.35.0.0
-Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: 1 BanGO, 1, LIC=14HV2-9GG1Y-RAQDM-XAC5M-7GG9J-IG763
+IDE-Version: ¦ÌVision V5.27.1.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: bg 1, 1, LIC=21E4T-RX6V6-12ELE-56H52-AJNCB-H26EV
  
 Tool Versions:
-Toolchain:       MDK-ARM Plus  Version: 5.35.0.2
-Toolchain Path:  D:\app\Keil_v5\ARM\ARMCC\Bin
-C Compiler:      Armcc.exe V5.06 update 7 (build 960)
-Assembler:       Armasm.exe V5.06 update 7 (build 960)
-Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
-Library Manager: ArmAr.exe V5.06 update 7 (build 960)
-Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
-CPU DLL:         SARMCM3.DLL V5.35.0.2
+Toolchain:       MDK-ARM Plus  Version: 5.30.0.0
+Toolchain Path:  E:\keil5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.30.0.0
 Dialog DLL:      DCM.DLL V1.17.3.0
-Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
-Dialog DLL:      TCM.DLL V1.53.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.42.0.0
  
 <h2>Project:</h2>
-C:\Users\BanGO\Desktop\BanEDrum\MDK-ARM\BanEDrum.uvprojx
-Project File Date:  01/09/2025
+C:\Users\Hasee\Desktop\BanEDrum2\BanEDrum2\BanEDrum2\MDK-ARM\BanEDrum.uvprojx
+Project File Date:  01/10/2025
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\app\Keil_v5\ARM\ARMCC\Bin'
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'E:\keil5\ARM\ARMCC\Bin'
 Build target 'BanEDrum'
 compiling logic_run.c...
-..\hardware\BG_flash_manager\bg_download.h(22): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\logic_run\logic_run.c: 1 warning, 0 errors
+../hardware/BG_flash_manager/bg_download.h(31): warning:  #1-D: last line of file ends without a newline
+  				 
+..\logic_run\logic_run.c(29): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+          sine_wave[i] = (int16_t)(sin((float)i * 2 * M_PI / BUFFER_SIZE) * 32767);
+..\logic_run\logic_run.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=23638 RO-data=470 RW-data=260 ZI-data=18724  
+Program Size: Code=41224 RO-data=1448 RW-data=356 ZI-data=20260  
 FromELF: creating hex file...
-"BanEDrum\BanEDrum.axf" - 0 Error(s), 1 Warning(s).
+"BanEDrum\BanEDrum.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -45,19 +47,20 @@ Package Vendor: ARM
    * Component: CORE Version: 5.5.0
 
 Package Vendor: Keil
-                https://www.keil.com/pack/Keil.STM32F4xx_DFP.3.0.0.pack
-                Keil.STM32F4xx_DFP.3.0.0
-                STMicroelectronics STM32F4 Series Device Support
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.14.0.pack
+                Keil.STM32F4xx_DFP.2.14.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
 
 <h2>Collection of Component include folders:</h2>
   .\RTE\_BanEDrum
-  D:\app\keil\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  E:\keil5\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  E:\keil5\pack\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
 
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.5.0
       Include file:  CMSIS\Core\Include\tz_context.h
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

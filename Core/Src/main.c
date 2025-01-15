@@ -65,6 +65,37 @@ void adc_handle()
 
 }
 
+#include "usbd_cdc_if.h"
+
+uint16_t tim2=0,tim3=0;
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+
+{
+
+//    if (htim->Instance == htim2.Instance)
+
+//    {
+//				tim2++;
+//				if(tim2==1000){
+//					usb_printf("TIM2 \n");
+//					tim2=0;
+//				}
+//    }
+//		
+		
+    if (htim->Instance == htim3.Instance)
+
+    {
+				
+				if(tim3==2){
+					usb_printf("TIM3 \n");
+					tim3=0;
+				}
+    }
+
+}
+
 
 
 
@@ -121,12 +152,16 @@ int main(void)
   MX_I2S2_Init();
   MX_SPI1_Init();
   MX_SDIO_SD_Init();
-  MX_TIM1_Init();
-  MX_TIM2_Init();
+  //MX_TIM2_Init();
   MX_USB_DEVICE_Init();
   MX_USART1_UART_Init();
+  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
-
+	
+	//HAL_TIM_Base_Start_IT(&htim2);
+	
+	HAL_TIM_Base_Start_IT(&htim3);
+	logic_init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -135,12 +170,12 @@ int main(void)
 		
   while (1)
   {
-		
+		logic_run();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
   }
-//  /* USER CODE END 3 */
+  /* USER CODE END 3 */
 }
 
 /**
